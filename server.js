@@ -57,6 +57,21 @@ function stripExplorerLinks(text) {
     .replaceAll(
       '[\\"$\\",\\"a\\",null,{\\"href\\":\\"https://explorer.imd.fun/launch\\",\\"children\\":\\"explorer.imd.fun/launch\\"}]',
       '\\"explorer.imd.fun/launch\\"'
+    )
+    .replace(/<a class="token-coins-go" href="https:\/\/communitycoins\.imd\.fun"[^>]*>[\s\S]*?<\/a>/g, "")
+    .replace(/<a class="ways_button__Ok_8k" href="https:\/\/pool4\.imd\.fun\/stake"[^>]*>[\s\S]*?<\/a>/g, "")
+    .replace(/<a class="ways_button__Ok_8k" href="\/seats\/"[^>]*>[\s\S]*?<\/a>/g, "")
+    .replace(/<a href="https:\/\/www\.defined\.fi\/token\/eth\/TBA\/0xb07d640fd9e2eb9dc81b953c8e4fd006bdfeaf276010fb5418eb763ca15abfb3"[^>]*>[\s\S]*?<\/a>/g, "")
+    .replace(/<a class="telegram-seat" href="\/seats\/">[\s\S]*?<\/a>/g, "")
+    .replaceAll('<a href="/seats/">agent seat</a>', "agent seat")
+    .replaceAll('<a href="/seats/">Buy one here</a>', "Buy one here")
+    .replaceAll(
+      '[\\"$\\",\\"a\\",null,{\\"href\\":\\"/seats/\\",\\"children\\":\\"agent seat\\"}]',
+      '\\"agent seat\\"'
+    )
+    .replaceAll(
+      '[\\"$\\",\\"a\\",null,{\\"href\\":\\"/seats/\\",\\"children\\":\\"Buy one here\\"}]',
+      '\\"Buy one here\\"'
     );
 }
 
