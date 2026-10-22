@@ -66,6 +66,14 @@ function stripExplorerLinks(text) {
     .replaceAll('<a href="/seats/">agent seat</a>', "agent seat")
     .replaceAll('<a href="/seats/">Buy one here</a>', "Buy one here")
     .replaceAll(
+      'href="/telegram/"',
+      'href="https://t.me/Identitymdagent" target="_blank" rel="noopener noreferrer"'
+    )
+    .replaceAll(
+      'href\\\":\\\"/telegram/\\\"',
+      'href\\\":\\\"https://t.me/Identitymdagent\\\",\\\"target\\\":\\\"_blank\\\",\\\"rel\\\":\\\"noopener noreferrer\\\"'
+    )
+    .replaceAll(
       '[\\"$\\",\\"a\\",null,{\\"href\\":\\"/seats/\\",\\"children\\":\\"agent seat\\"}]',
       '\\"agent seat\\"'
     )
