@@ -61,7 +61,7 @@ function stripExplorerLinks(text) {
     .replace(/<a class="token-coins-go" href="https:\/\/communitycoins\.imd\.fun"[^>]*>[\s\S]*?<\/a>/g, "")
     .replace(/<a class="ways_button__Ok_8k" href="https:\/\/pool4\.imd\.fun\/stake"[^>]*>[\s\S]*?<\/a>/g, "")
     .replace(/<a class="ways_button__Ok_8k" href="\/seats\/"[^>]*>[\s\S]*?<\/a>/g, "")
-    .replace(/<a href="https:\/\/www\.defined\.fi\/token\/eth\/TBA\/0xb07d640fd9e2eb9dc81b953c8e4fd006bdfeaf276010fb5418eb763ca15abfb3"[^>]*>[\s\S]*?<\/a>/g, "")
+    .replace(/<a href="https:\/\/www\.defined\.fi\/token\/eth\/0x35878A811eE2F2A1934769716E185cc1F61F8eb7\/0xb07d640fd9e2eb9dc81b953c8e4fd006bdfeaf276010fb5418eb763ca15abfb3"[^>]*>[\s\S]*?<\/a>/g, "")
     .replace(/<a class="telegram-seat" href="\/seats\/">[\s\S]*?<\/a>/g, "")
     .replaceAll('<a href="/seats/">agent seat</a>', "agent seat")
     .replaceAll('<a href="/seats/">Buy one here</a>', "Buy one here")
